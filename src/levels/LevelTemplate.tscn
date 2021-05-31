@@ -1,0 +1,265 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://images/background/layers/Layer_0003_6.png" type="Texture" id=1]
+[ext_resource path="res://images/background/layers/Layer_0005_5.png" type="Texture" id=2]
+[ext_resource path="res://images/background/layers/Layer_0009_2.png" type="Texture" id=3]
+[ext_resource path="res://images/background/layers/Layer_0006_4.png" type="Texture" id=4]
+[ext_resource path="res://images/background/layers/Layer_0010_1.png" type="Texture" id=5]
+[ext_resource path="res://images/background/layers/Layer_0004_Lights.png" type="Texture" id=6]
+[ext_resource path="res://images/background/layers/Layer_0007_Lights.png" type="Texture" id=7]
+[ext_resource path="res://images/background/layers/Layer_0008_3.png" type="Texture" id=8]
+[ext_resource path="res://images/background/layers/Layer_0002_7.png" type="Texture" id=9]
+[ext_resource path="res://src/environment/Sky.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/menus/YouWonText.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/environment/Ground.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/characters/Player.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/levels/Level.gd" type="Script" id=14]
+[ext_resource path="res://fonts/BebasNeue Bold.ttf" type="DynamicFontData" id=15]
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 15 )
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 14 )
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.1, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer1"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 5 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer1"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 5 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer2"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer2"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer3"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer3"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.4, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer4"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 7 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer4"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 7 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer5"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 4 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer5"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 4 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer6"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer6"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer7"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 6 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer7"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 6 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.8, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer8"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer8"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer9"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 9 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer9"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 9 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Ground" type="Node2D" parent="."]
+position = Vector2( 51.3912, 487.692 )
+rotation = 1.5708
+scale = Vector2( 1.6, 0.679995 )
+
+[node name="Ground1" parent="Ground" instance=ExtResource( 12 )]
+position = Vector2( 15.1926, -583.252 )
+rotation = -1.5708
+scale = Vector2( 1.4706, 0.625 )
+
+[node name="Wall" parent="Ground" groups=[
+"wall",
+] instance=ExtResource( 12 )]
+position = Vector2( -247.546, 66.0733 )
+scale = Vector2( 0.625, 1.4706 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/Wall"]
+margin_left = 396.074
+margin_top = -44.9295
+margin_right = 436.074
+margin_bottom = -4.9295
+rect_scale = Vector2( 1.6, 0.679995 )
+color = Color( 0.0470588, 0.0666667, 0.133333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="TimeLabel" type="Label" parent="UI"]
+margin_left = 468.0
+margin_top = 32.0
+margin_right = 579.0
+margin_bottom = 112.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "0:21"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KilledLabel" type="Label" parent="UI"]
+margin_left = 22.0
+margin_top = 48.0
+margin_bottom = 99.0
+custom_fonts/font = SubResource( 2 )
+text = "0/21 killed"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SilentKilledLabel" type="Label" parent="UI"]
+margin_left = 20.0
+margin_top = 76.0
+margin_bottom = 127.0
+custom_fonts/font = SubResource( 2 )
+text = "03 stealth kills"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouWonText" parent="UI" instance=ExtResource( 11 )]
+modulate = Color( 1, 1, 1, 0 )
+
+[node name="Traps" type="Node2D" parent="."]
+position = Vector2( 568, 220 )
+
+[node name="Sky" type="Node2D" parent="."]
+position = Vector2( 51.3912, 487.692 )
+scale = Vector2( 1.6, 0.679995 )
+
+[node name="Sky" parent="Sky" instance=ExtResource( 10 )]
+visible = false
+position = Vector2( 44647.4, -652.842 )
+scale = Vector2( 100, 1 )
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Player" parent="Characters" instance=ExtResource( 13 )]
+position = Vector2( 224, 376 )
+
+[node name="Enemies" type="Node2D" parent="Characters"]
+
+[node name="Instructions" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0.670588 )
+z_index = 10

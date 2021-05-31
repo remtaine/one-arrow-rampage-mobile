@@ -1,0 +1,468 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://src/environment/Spikes.tscn" type="PackedScene" id=1]
+[ext_resource path="res://fonts/BebasNeue Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://src/environment/Ground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/levels/Level.gd" type="Script" id=4]
+[ext_resource path="res://src/environment/MidGround.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/characters/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/environment/FloatingSpikes.tscn" type="PackedScene" id=7]
+[ext_resource path="res://images/background/layers/Layer_0007_Lights.png" type="Texture" id=8]
+[ext_resource path="res://images/background/layers/Layer_0009_2.png" type="Texture" id=9]
+[ext_resource path="res://images/background/layers/Layer_0008_3.png" type="Texture" id=10]
+[ext_resource path="res://src/characters/Titan.tscn" type="PackedScene" id=11]
+[ext_resource path="res://images/background/layers/Layer_0010_1.png" type="Texture" id=12]
+[ext_resource path="res://images/background/layers/Layer_0006_4.png" type="Texture" id=13]
+[ext_resource path="res://images/background/layers/Layer_0004_Lights.png" type="Texture" id=14]
+[ext_resource path="res://src/environment/Sky.tscn" type="PackedScene" id=15]
+[ext_resource path="res://images/background/layers/Layer_0002_7.png" type="Texture" id=16]
+[ext_resource path="res://images/background/layers/Layer_0003_6.png" type="Texture" id=17]
+[ext_resource path="res://images/background/layers/Layer_0005_5.png" type="Texture" id=18]
+[ext_resource path="res://src/menus/YouWonText.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/tilesets/Props.tres" type="TileSet" id=20]
+[ext_resource path="res://src/ui/TitleLabel.tscn" type="PackedScene" id=21]
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 48
+font_data = ExtResource( 2 )
+
+[node name="Level0" type="Node2D"]
+script = ExtResource( 4 )
+level_instance_name = "Level0"
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.1, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer1"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 12 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer1"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 12 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer2"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 9 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer2"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 9 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer3"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 10 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer3"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 10 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.4, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer4"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer4"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer5"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 13 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer5"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 13 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer6"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 18 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer6"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 18 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer7"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 14 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer7"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 14 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.8, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer8"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 17 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer8"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 17 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer9"]
+position = Vector2( 0, 540 )
+texture = ExtResource( 16 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="Sprite2" type="Sprite" parent="Background/ParallaxLayer9"]
+position = Vector2( 928, 540 )
+texture = ExtResource( 16 )
+centered = false
+offset = Vector2( 0, -793 )
+
+[node name="BackgroundDecorTileMap" type="TileMap" parent="."]
+scale = Vector2( 1.5, 1.5 )
+z_index = -30
+tile_set = ExtResource( 20 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( 11144911, 11, 0, 11603419, 14, 0, 18221948, 15, 0, 18482542, 12, 0, 18809718, 10, 0, 19730533, 13, 0 )
+
+[node name="Ground" type="Node2D" parent="."]
+position = Vector2( 51.3912, 487.692 )
+rotation = 1.5708
+scale = Vector2( 1.6, 0.679995 )
+
+[node name="Ground1" parent="Ground" instance=ExtResource( 3 )]
+position = Vector2( 15.1926, -583.252 )
+rotation = -1.5708
+scale = Vector2( 1.4706, 0.625 )
+
+[node name="Ground4" parent="Ground" instance=ExtResource( 3 )]
+position = Vector2( 137.2, -1618.81 )
+rotation = 1.5708
+scale = Vector2( 5.10885, 4.66582 )
+z_index = -10
+
+[node name="Ground2" parent="Ground" instance=ExtResource( 3 )]
+position = Vector2( 15.1926, -1947.97 )
+rotation = -1.5708
+scale = Vector2( 1.4706, 0.625 )
+
+[node name="Ground3" parent="Ground" instance=ExtResource( 3 )]
+position = Vector2( 15.1925, -3312.68 )
+rotation = -1.5708
+scale = Vector2( 1.4706, 0.625 )
+
+[node name="Ground6" parent="Ground" instance=ExtResource( 3 )]
+position = Vector2( -4.81262, -3312.68 )
+rotation = -1.5708
+scale = Vector2( 1.4706, 0.625 )
+
+[node name="MidGround" parent="Ground" instance=ExtResource( 5 )]
+position = Vector2( -137.314, -4677.4 )
+rotation = -1.5708
+scale = Vector2( 1.4706, 0.625 )
+
+[node name="MidGround2" parent="Ground" instance=ExtResource( 5 )]
+position = Vector2( -124.82, -7918.6 )
+rotation = -1.5708
+scale = Vector2( 1.4706, 0.625 )
+
+[node name="Ground5" parent="Ground" instance=ExtResource( 3 )]
+position = Vector2( 15.1924, -6042.12 )
+rotation = -1.5708
+scale = Vector2( 1.4706, 0.625 )
+
+[node name="Ground7" parent="Ground" instance=ExtResource( 3 )]
+position = Vector2( 95.6611, -6042.73 )
+rotation = 1.5708
+scale = Vector2( 1.45365, 3.50737 )
+z_index = -10
+
+[node name="Ground9" parent="Ground" instance=ExtResource( 3 )]
+position = Vector2( 15.1782, -8771.55 )
+rotation = -1.5708
+scale = Vector2( 1.4706, 0.625 )
+
+[node name="Ground10" parent="Ground" instance=ExtResource( 3 )]
+position = Vector2( 151.842, -8770.33 )
+rotation = 1.5708
+scale = Vector2( 1.4456, 5.27209 )
+z_index = -10
+
+[node name="Wall" parent="Ground" groups=[
+"wall",
+] instance=ExtResource( 3 )]
+position = Vector2( -247.546, 66.0733 )
+scale = Vector2( 0.625, 1.4706 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/Wall"]
+margin_left = 396.074
+margin_top = -44.9295
+margin_right = 436.074
+margin_bottom = -4.9295
+rect_scale = Vector2( 1.6, 0.679995 )
+color = Color( 0.0470588, 0.0666667, 0.133333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ForegroundDecorTileMap" type="TileMap" parent="."]
+scale = Vector2( 1.5, 1.5 )
+tile_set = ExtResource( 20 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( 8916255, 17, 0, 9570542, 18, 0, 9963371, 0, 0, 17762741, 16, 0, 18681511, 5, 0 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="TimeLabel" type="Label" parent="UI"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -100.0
+margin_top = 25.0732
+margin_right = 100.0
+margin_bottom = 61.0732
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "0:21"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Goals" type="VBoxContainer" parent="UI"]
+margin_left = 17.9094
+margin_top = 57.3102
+margin_right = 149.909
+margin_bottom = 109.31
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KilledLabel" type="Label" parent="UI/Goals"]
+margin_right = 132.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 2 )
+text = "0/21 killed"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SilentKilledLabel" type="Label" parent="UI/Goals"]
+margin_top = 28.0
+margin_right = 132.0
+margin_bottom = 52.0
+custom_fonts/font = SubResource( 2 )
+text = "03 stealth kills"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouWonText" parent="UI" instance=ExtResource( 19 )]
+
+[node name="Traps" type="Node2D" parent="."]
+position = Vector2( 568, 220 )
+
+[node name="FloatingSpikes" parent="Traps" instance=ExtResource( 7 )]
+position = Vector2( 1508, 96 )
+
+[node name="Spikes" parent="Traps" instance=ExtResource( 1 )]
+position = Vector2( 3440, 188 )
+
+[node name="Spikes2" parent="Traps" instance=ExtResource( 1 )]
+position = Vector2( 3780, 188 )
+
+[node name="FloatingSpikes2" parent="Traps" instance=ExtResource( 7 )]
+position = Vector2( 5596, 156 )
+
+[node name="Spikes3" parent="Traps" instance=ExtResource( 1 )]
+position = Vector2( 4856, -4 )
+
+[node name="Spikes4" parent="Traps" instance=ExtResource( 1 )]
+position = Vector2( 5796, 188 )
+
+[node name="Spikes5" parent="Traps" instance=ExtResource( 1 )]
+position = Vector2( 1036, 188 )
+
+[node name="FloatingSpikes3" parent="Traps" instance=ExtResource( 7 )]
+position = Vector2( 4576, -48 )
+
+[node name="Sky" type="Node2D" parent="."]
+position = Vector2( 51.3912, 487.692 )
+scale = Vector2( 1.6, 0.679995 )
+
+[node name="Sky" parent="Sky" instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 44647.4, -652.842 )
+scale = Vector2( 100, 1 )
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Player" parent="Characters" instance=ExtResource( 6 )]
+position = Vector2( 224.895, 376 )
+
+[node name="Enemies" type="Node2D" parent="Characters"]
+
+[node name="Titan" parent="Characters/Enemies" instance=ExtResource( 11 )]
+position = Vector2( 2692, 400 )
+
+[node name="Titan2" parent="Characters/Enemies" instance=ExtResource( 11 )]
+position = Vector2( 3520, 224 )
+
+[node name="Titan5" parent="Characters/Enemies" instance=ExtResource( 11 )]
+position = Vector2( 4544, 448 )
+
+[node name="Titan4" parent="Characters/Enemies" instance=ExtResource( 11 )]
+position = Vector2( 5760, 240 )
+
+[node name="Titan3" parent="Characters/Enemies" instance=ExtResource( 11 )]
+position = Vector2( 2976, 224 )
+
+[node name="Titan6" parent="Characters/Enemies" instance=ExtResource( 11 )]
+position = Vector2( 5848, 440 )
+
+[node name="Titan7" parent="Characters/Enemies" instance=ExtResource( 11 )]
+position = Vector2( 6032, 436 )
+
+[node name="Titan8" parent="Characters/Enemies" instance=ExtResource( 11 )]
+position = Vector2( 4144, 432 )
+
+[node name="Instructions" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0.670588 )
+z_index = 10
+
+[node name="TitleLabel" parent="Instructions" instance=ExtResource( 21 )]
+margin_top = 220.0
+margin_bottom = 415.0
+
+[node name="MoveLabel" type="Label" parent="Instructions"]
+modulate = Color( 1, 1, 1, 0.658824 )
+margin_left = 644.0
+margin_top = 352.0
+margin_right = 861.0
+margin_bottom = 400.0
+custom_fonts/font = SubResource( 3 )
+text = "WASD to move"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FireLabel" type="Label" parent="Instructions"]
+modulate = Color( 1, 1, 1, 0.658824 )
+margin_left = 1408.0
+margin_top = 296.0
+margin_right = 1729.0
+margin_bottom = 344.0
+custom_fonts/font = SubResource( 3 )
+text = "Caution! Hot!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttackLabel" type="Label" parent="Instructions"]
+modulate = Color( 1, 1, 1, 0.658824 )
+margin_left = 1920.0
+margin_top = 188.0
+margin_right = 2272.0
+margin_bottom = 287.0
+custom_fonts/font = SubResource( 3 )
+text = "Left Click to Attack,
+aim with mouse"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GrappleLabel" type="Label" parent="Instructions"]
+modulate = Color( 1, 1, 1, 0.658824 )
+margin_left = 2768.0
+margin_top = 132.0
+margin_right = 3121.0
+margin_bottom = 180.0
+custom_fonts/font = SubResource( 3 )
+text = "Right Click to Grapple"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GrappleHitLabel" type="Label" parent="Instructions"]
+modulate = Color( 1, 1, 1, 0.658824 )
+margin_left = 3972.0
+margin_top = 332.0
+margin_right = 4380.0
+margin_bottom = 380.0
+custom_fonts/font = SubResource( 3 )
+text = "Grapple Arrow Can Kill"
+__meta__ = {
+"_edit_use_anchors_": false
+}
